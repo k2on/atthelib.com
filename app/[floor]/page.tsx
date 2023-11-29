@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: `Floor ${f} At The Lib`,
         description: 'Find me at the library',
         openGraph: {
-                images: [imageUrl]
+                images: ["https://atthelib.com" + imageUrl]
             }
     };
 }
