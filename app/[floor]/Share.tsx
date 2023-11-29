@@ -1,13 +1,15 @@
 "use client"
 
 export default function Share({floor}: {floor: string}) {
+
+    const f = floor.split("X")[0];
     
     const onShare = () => {
 
     if (navigator.share) {
     navigator.share({
       title: 'Meet me At The Lib',
-      text: 'On floor ' + floor,
+      text: 'On floor ' + f,
       url: window.location.href,
     })
         } else {
