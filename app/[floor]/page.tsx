@@ -48,6 +48,7 @@ export default function Floor({ params }: Props) {
             </div>
             <div style={{flexGrow: "1", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
                 <div style={{ fontSize: "40px" }}>Floor {f}</div>
+                <div style={{ fontSize: "20px", color: "gray" }}>Tap somewhere on the map</div>
                 <div style={{ width: "100%", textAlign: "center", marginTop: "40px" }}>
                     <Share floor={floor} />
                 </div>
