@@ -29,6 +29,7 @@ export default function Floor({ params }: Props) {
     <>
         <Head>
             <title>Floor {floor}</title>
+            
             <meta property="og:title" content="At the Lib" />
             <meta property="og:type" content="atthelib" />
             <meta property="og:image" content={imageUrl} />
