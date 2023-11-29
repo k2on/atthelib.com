@@ -1,8 +1,16 @@
 import Head from "next/head";
 import Input from "./Input";
 import Link from "next/link";
-import { title } from "process";
 import Share from "./Share";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    return {
+        title: `Floor ${params.floor} At The Lib`,
+        description: 'Find me at the library'
+    };
+}
+
 
 interface Props {
     params: { floor: string }
