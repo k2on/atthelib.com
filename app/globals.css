@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.floor-list a:nth-child(odd) {
+    background: #F56600;
+}
+
+.floor-list a:nth-child(even) {
+    background: #522D80;
+}
