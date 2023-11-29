@@ -5,8 +5,10 @@ import Share from "./Share";
 import { Metadata } from "next";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const parts = params.floor.split("X");
+    const f = parts[0];
     return {
-        title: `Floor ${params.floor} At The Lib`,
+        title: `Floor ${f} At The Lib`,
         description: 'Find me at the library'
     };
 }
@@ -29,7 +31,6 @@ export default function Floor({ params }: Props) {
     <>
         <Head>
             <title>Floor {floor}</title>
-            
             <meta property="og:title" content="At the Lib" />
             <meta property="og:type" content="atthelib" />
             <meta property="og:image" content={imageUrl} />
