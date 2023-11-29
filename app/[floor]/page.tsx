@@ -7,9 +7,15 @@ import { Metadata } from "next";
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const parts = params.floor.split("X");
     const f = parts[0];
+    const x = parts[1];
+    const y = parts[2];
+    const imageUrl = parts.length > 1 ? `/img/${f}:${x}:${y}` : `/img/${f}`;
     return {
         title: `Floor ${f} At The Lib`,
-        description: 'Find me at the library'
+        description: 'Find me at the library',
+        openGraph: {
+                images: [imageUrl]
+            }
     };
 }
 
