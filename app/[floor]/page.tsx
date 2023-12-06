@@ -42,7 +42,7 @@ export default function Floor({ params }: Props) {
             <meta property="og:image" content={imageUrl} />
             <meta property="og:description" content="Come find me AtTheLib!" />
         </Head>
-        <div style={{ display: 'flex', flexDirection: "column", height: "100vh" }}>
+        <div style={{ maxWidth: "500px", margin: "auto", display: 'flex', flexDirection: "column", height: "100vh" }}>
             <div style={{ display: "flex", alignItems: "center",  height: "80vh" }}>
                 <Input url={imageUrl} />
             </div>

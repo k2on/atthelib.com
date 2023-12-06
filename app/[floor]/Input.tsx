@@ -41,20 +41,21 @@ export default function Input({ url }: { url: string }) {
 
             const imgX = ref.current.width;
             const imgY = ref.current.height;
-            const off = ref.current.offsetTop;
+            const offX = ref.current.offsetLeft;
+            const offY = ref.current.offsetTop
 
             const size = getSize(parseInt(floor));
     
             const rX = size.x / imgX;
             const rY = size.y / imgY;
 
-            const eX = e.layerX;
-            const eY = e.layerY - off;
+            const eX = e.layerX - offX;
+            const eY = e.layerY - offY;
 
 
-            console.log(size, imgX, imgY, eX, eY, e);
-            console.log(e);
-            console.log(off);
+            // console.log(size, imgX, imgY, eX, eY, e);
+            // console.log(offX);
+            // console.log(ref.current.offsetLeft);
 
             const x = eX * rX - 50;
             const y = eY * rY - 50;

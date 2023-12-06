@@ -1,6 +1,9 @@
 "use client"
 
+import { useState } from "react";
+
 export default function Share({floor}: {floor: string}) {
+    const [copied, setCopied] = useState(false);
 
     const f = floor.split("X")[0];
     
@@ -14,7 +17,10 @@ export default function Share({floor}: {floor: string}) {
     })
         } else {
                   navigator.clipboard.writeText(window.location.href).then(() => {
-                alert("Link copied to clip board");
+                setCopied(true);
+                setTimeout(() => {
+                    setCopied(false);
+                    }, 1000);
 
                       })
 
@@ -22,5 +28,5 @@ export default function Share({floor}: {floor: string}) {
 
     }
 
-    return <button onClick={onShare} style={{ background: '#F56600', fontSize: "40px", padding: "0 20px", borderRadius: "10px" }}>SHARE</button>;
+    return <button onClick={onShare} style={{ background: '#F56600', fontSize: "40px", padding: "0 20px", borderRadius: "10px" }}>{copied ? "Link Copied!" : "SHARE"}</button>;
 }
