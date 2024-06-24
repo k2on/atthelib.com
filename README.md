@@ -2,4 +2,4 @@
 
 Send your location at Cooper Library instantly.
 
-<img src="https://i.imgur.com/SwstyLw.jpg" />
+<img height="200px" src="https://i.imgur.com/SwstyLw.jpg" />
