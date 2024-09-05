@@ -23,5 +23,5 @@ export default function Share({ floor }: { floor: string }) {
 		}
 	}
 
-	return <button onClick={onShare} style={{ background: "#F56600", fontSize: "40px", padding: "0 20px", borderRadius: "10px" }}>{copied ? "Link Copied!" : "SHARE"}</button>;
+	return <button onClick={onShare} style={{ background: "var(--orange)", fontSize: "40px", padding: "0 20px", borderRadius: "10px" }}>{copied ? "Link Copied!" : "SHARE"}</button>;
 }

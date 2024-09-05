@@ -6,6 +6,8 @@
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
+	--orange: #f77c25;
+	--purple: #804cbf;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,9 +26,9 @@ body {
 }
 
 .floor-list a:nth-child(odd) {
-	background: #F56600;
+	background: var(--orange);
 }
 
 .floor-list a:nth-child(even) {
-	background: #522D80;
+	background: var(--purple);
 }
