@@ -25,6 +25,6 @@ export default function Input({ location }: { location: string }) {
 		}
 	}, [ref]);
 
-	return <img ref={ref} style={{ width: "auto" }} src={`/img/${location}`} />;
+	return <img ref={ref} className="max-h-[70vh] px-1" src={`/img/${location}`} />;
 
 }

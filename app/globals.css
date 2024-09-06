@@ -6,8 +6,8 @@
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
-	--orange: #f77c25;
-	--purple: #804cbf;
+	--color-primary: 247, 124, 37;
+	--color-secondary: 128, 76, 191;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,12 +23,4 @@ body {
 	background: linear-gradient(to bottom,
 			transparent,
 			rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
-
-.floor-list a:nth-child(odd) {
-	background: var(--orange);
-}
-
-.floor-list a:nth-child(even) {
-	background: var(--purple);
 }

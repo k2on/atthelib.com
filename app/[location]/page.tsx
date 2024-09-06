@@ -35,19 +35,17 @@ export default function Floor({ params }: Props) {
 				<meta property="og:image" content={imageUrl} />
 				<meta property="og:description" content="Come find me AtTheLib!" />
 			</Head>
-			<div style={{ maxWidth: "500px", margin: "auto", display: 'flex', flexDirection: "column", height: "100vh" }}>
-				<div style={{ display: "flex", alignItems: "center", height: "80vh" }}>
-					<Input location={location} />
+			<div className="flex flex-col items-center text-center h-screen">
+				<div className="flex flex-col items-center justify-center grow mb-2">
+					<h1 className="text-4xl font-bold">Floor {floor}</h1>
+					<h2 className="text-2xl text-slate-400">tap somewhere on the map</h2>
 				</div>
-				<div style={{ flexGrow: "1", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
-					<div style={{ fontSize: "40px" }}>Floor {floor}</div>
-					<div style={{ fontSize: "20px", color: "gray" }}>Tap somewhere on the map</div>
-					<div style={{ width: "100%", textAlign: "center", marginTop: "40px" }}>
-						<Share floor={floor} />
-					</div>
-					<div style={{ marginTop: "40px", marginBottom: "40px" }}>
-						<Link href="/"><button style={{ fontSize: "20px", color: "gray" }}>⬅ BACK</button></Link>
-					</div>
+				<Input location={location} />
+				<div className="flex flex-col items-center justify-center gap-3 grow mt-2">
+					<Share floor={floor} />
+					<Link href="/">
+						<button className="text-xl">⬅ BACK</button>
+					</Link>
 				</div>
 			</div>
 		</>
