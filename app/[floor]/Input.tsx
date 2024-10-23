@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Size {
     x: number,
@@ -30,6 +30,7 @@ function getSize(floor: number): Size {
 
 export default function Input({ url }: { url: string }) {
     const ref = React.createRef<HTMLImageElement>();
+    const [pos, setPos] = useState<[number, number]>();
 
     useEffect(() => {
         if (!ref.current) return;
@@ -60,10 +61,15 @@ export default function Input({ url }: { url: string }) {
             const x = eX * rX - 50;
             const y = eY * rY - 50;
 
-            window.location.href = `${floor}X${x}X${y}`;
+            setPos([eX, eY]);
+
+            // window.location.href = `${floor}X${x}X${y}`;
         }
     }, [ref])
 
-    return <img ref={ref} style={{ width: "auto" }} src={url} />
+    return <div className="relative">
+        {pos && <img style={{ transform: `translate(${pos[0]}px, ${pos[1]}px)`}} className="w-8 h-8 absolute transition-transform" src="/paw.png" />}
+        <img ref={ref} style={{ width: "auto" }} src={url} /> 
+    </div>
 
 }
